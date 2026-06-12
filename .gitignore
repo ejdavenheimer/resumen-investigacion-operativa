@@ -1,0 +1,12 @@
+# Material de la cátedra (con copyright) — no se publica
+*.pdf
+
+# Archivos locales / del sistema
+.claude/
+.DS_Store
+
+# Demo viejo (reemplazado por js/)
+script.js
+
+# Node
+node_modules/
