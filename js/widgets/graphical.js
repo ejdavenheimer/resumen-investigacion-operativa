@@ -277,6 +277,7 @@
     const grid = IO.h("div.grid-2"), left = IO.h("div"), right = IO.h("div");
     grid.appendChild(left); grid.appendChild(right); wrap.appendChild(grid);
     const canvas = document.createElement("canvas"); canvas.width = 460; canvas.height = 380;
+    canvas.setAttribute("role", "img"); canvas.setAttribute("aria-label", "Gráfico de la región factible: " + (cfg.title || "problema de programación lineal") + ". El detalle numérico aparece en el texto de la derecha.");
     left.appendChild(canvas); left.appendChild(legend());
     const sliderWrap = IO.h("div", { style: "margin-top:.8rem" });
     const sliderLabel = IO.h("div", { style: "font-size:.82rem;color:var(--ink-soft);font-weight:600" });
@@ -372,6 +373,7 @@
     const grid = IO.h("div.grid-2"), left = IO.h("div"), right = IO.h("div");
     grid.appendChild(left); grid.appendChild(right); wrap.appendChild(grid);
     const canvas = document.createElement("canvas"); canvas.width = 460; canvas.height = 380;
+    canvas.setAttribute("role", "img"); canvas.setAttribute("aria-label", "Gráfico de la región factible: " + (cfg.title || "problema de programación lineal") + ". El detalle numérico aparece en el texto de la derecha.");
     left.appendChild(canvas); left.appendChild(legend());
     const title = IO.h("div", { style: "font-weight:700;color:var(--brand);margin-bottom:.4rem;font-size:1.02rem" });
     const desc = IO.h("div", { style: "font-size:.92rem;line-height:1.7;min-height:8rem" });
@@ -408,6 +410,7 @@
     const cfg = deepCopy(rawCfg); cfg.editable = false;
     const sol = solve(cfg), range = computeRange(cfg, sol);
     const canvas = document.createElement("canvas"); canvas.width = 360; canvas.height = 300;
+    canvas.setAttribute("role", "img"); canvas.setAttribute("aria-label", "Gráfico de la región factible. El resultado se describe en el texto debajo.");
     drawScene(canvas, cfg, sol, { range, showRegion: true, showVertices: true, showOptimal: !sol.unbounded && sol.feasible, zLine: sol.best && !sol.unbounded ? sol.best.z : null });
     let tipo = "", cls = "indigo";
     if (!sol.feasible) { tipo = "🚫 No factible"; cls = "amber"; }
@@ -469,6 +472,7 @@
   IO.specialCase = function (container, kind) {
     const spec = SPECS[kind] || SPECS.factible;
     const canvas = document.createElement("canvas"); canvas.width = 320; canvas.height = 250;
+    canvas.setAttribute("aria-hidden", "true"); // ilustración decorativa; el texto de abajo la describe
     drawMini(canvas, spec);
     const box = IO.h("div", { style: "text-align:center" });
     box.appendChild(canvas);

@@ -3,24 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>IO Interactiva · Investigación Operativa paso a paso</title>
+
+  <!-- SEO -->
+  <title>Investigación Operativa paso a paso · Gráfico, Simplex, Dualidad (UTN.BA)</title>
+  <meta name="description" content="Aprendé Investigación Operativa de forma interactiva: cómo formular, resolver e interpretar. Método gráfico, Simplex paso a paso, dualidad, análisis de sensibilidad, programación entera y ejercicios resueltos del parcial (UTN.BA)." />
+  <meta name="keywords" content="investigación operativa, programación lineal, método simplex, método gráfico, dualidad, análisis de sensibilidad, programación entera, branch and bound, UTN, ejercicios resueltos, parcial" />
+  <meta name="author" content="ejdavenheimer" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#4338ca" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="favicon.svg" />
+
+  <link rel="canonical" href="https://io.dhem.tech/" />
+
+  <!-- Open Graph / redes sociales -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Investigación Operativa Interactiva" />
+  <meta property="og:title" content="Investigación Operativa paso a paso (UTN.BA)" />
+  <meta property="og:description" content="Método gráfico, Simplex número por número, dualidad, sensibilidad y ejercicios resueltos. Interactivo y sin instalación." />
+  <meta property="og:url" content="https://io.dhem.tech/" />
+  <meta property="og:image" content="https://io.dhem.tech/og-image.png" />
+  <meta property="og:locale" content="es_AR" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Investigación Operativa paso a paso (UTN.BA)" />
+  <meta name="twitter:description" content="Método gráfico, Simplex número por número, dualidad, sensibilidad y ejercicios resueltos. Interactivo y sin instalación." />
+  <meta name="twitter:image" content="https://io.dhem.tech/og-image.png" />
+
   <link rel="stylesheet" href="styles.css" />
   <!-- KaTeX (render de fórmulas) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous" />
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
 </head>
 <body>
+  <a class="skip-link" href="#content">Saltar al contenido</a>
   <div class="progress-top" id="progressTop"></div>
 
   <div class="topbar">
-    <button class="menu-btn" id="menuBtn" aria-label="Menú">☰</button>
-    <strong>IO Interactiva</strong>
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="sidebar">☰</button>
+    <strong>Investigación Operativa</strong>
   </div>
 
   <div class="backdrop" id="backdrop"></div>
 
   <div class="app">
-    <aside class="sidebar" id="sidebar">
+    <aside class="sidebar" id="sidebar" aria-label="Navegación principal">
       <div class="sidebar-head">
         <div class="logo">IO</div>
         <div class="sidebar-titles">
@@ -43,10 +71,10 @@
         </a>
       </div>
       <div class="sidebar-sep"></div>
-      <nav id="nav"></nav>
+      <nav id="nav" aria-label="Unidades y temas"></nav>
     </aside>
 
-    <main class="content" id="content"></main>
+    <main class="content" id="content" tabindex="-1"></main>
   </div>
 
   <!-- Núcleo -->

@@ -25,6 +25,19 @@
 
 * { box-sizing: border-box; }
 
+/* Accesibilidad: saltar al contenido (visible al tabular) */
+.skip-link {
+  position: absolute;
+  left: -9999px; top: 0;
+  background: var(--brand); color: #fff;
+  padding: 0.7rem 1.1rem; border-radius: 0 0 10px 0;
+  font-weight: 600; z-index: 200;
+  text-decoration: none;
+}
+.skip-link:focus { left: 0; }
+:focus-visible { outline: 3px solid rgba(99, 102, 241, 0.55); outline-offset: 2px; }
+.content:focus { outline: none; }
+
 html { scroll-behavior: smooth; }
 
 body {

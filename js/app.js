@@ -60,7 +60,10 @@
 
     // marcar link activo
     document.querySelectorAll(".nav-link").forEach((a) => {
-      a.classList.toggle("active", a.dataset.id === section.id);
+      const isActive = a.dataset.id === section.id;
+      a.classList.toggle("active", isActive);
+      if (isActive) a.setAttribute("aria-current", "page");
+      else a.removeAttribute("aria-current");
     });
 
     // scroll arriba
@@ -71,7 +74,7 @@
     sidebar.classList.remove("open");
     backdrop.classList.remove("show");
 
-    document.title = section.title + " · IO Interactiva";
+    document.title = section.title + " · Investigación Operativa (UTN.BA)";
   }
 
   /* ---------- Routing ---------- */
@@ -85,9 +88,11 @@
   IO.go = function (id) { location.hash = "#" + id; };
 
   /* ---------- Mobile ---------- */
-  document.getElementById("menuBtn").addEventListener("click", () => {
-    sidebar.classList.toggle("open");
+  const menuBtn = document.getElementById("menuBtn");
+  menuBtn.addEventListener("click", () => {
+    const open = sidebar.classList.toggle("open");
     backdrop.classList.toggle("show");
+    menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
   });
   backdrop.addEventListener("click", () => {
     sidebar.classList.remove("open");

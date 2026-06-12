@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e1b4b"/>
+    </linearGradient>
+    <linearGradient id="mark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4338ca"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1200" height="8" fill="url(#mark)"/>
+  <rect x="90" y="96" width="120" height="120" rx="28" fill="url(#mark)"/>
+  <text x="150" y="160" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="58" font-weight="800"
+        fill="#fff" text-anchor="middle" dominant-baseline="central" letter-spacing="-2">IO</text>
+  <text x="240" y="150" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="34" font-weight="600" fill="#a5b4fc">UTN.BA · Guía interactiva</text>
+  <text x="90" y="320" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="88" font-weight="800" fill="#f8fafc" letter-spacing="-2">Investigación Operativa</text>
+  <text x="90" y="410" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="44" font-weight="500" fill="#cbd5e1">paso a paso, de verdad</text>
+  <text x="90" y="500" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="32" font-weight="500" fill="#94a3b8">Método gráfico · Simplex número por número · Dualidad · Sensibilidad</text>
+  <text x="90" y="560" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" fill="#a5b4fc">io.dhem.tech</text>
+</svg>
