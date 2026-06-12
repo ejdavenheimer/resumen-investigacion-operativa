@@ -61,6 +61,9 @@ js/
 
 **ejdavenheimer**
 
+- GitHub: https://github.com/ejdavenheimer
 - LinkedIn: https://www.linkedin.com/in/ejdavenheimer/
 - Discord: https://discord.gg/7S3uZXYrE7
 - Plan de estudio UTN: https://planutn.dhem.tech/
+
+📦 **Código de este proyecto:** https://github.com/ejdavenheimer/resumen-investigacion-operativa
