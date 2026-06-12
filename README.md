@@ -3,8 +3,6 @@
 Una web **interactiva** para estudiar Investigación Operativa paso a paso: cómo **formular** cada
 ejercicio, cómo **resolverlo** de principio a fin y cómo **interpretar** los resultados.
 
-🌐 **Demo en vivo:** https://io.dhem.tech/
-
 > Sin instalación: se abre con doble clic en `index.html`. No necesita servidor ni build.
 
 ## ✨ Qué incluye
